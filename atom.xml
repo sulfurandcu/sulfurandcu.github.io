@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ㄅㄆㄇㄈ</title>
+  <icon>https://sulfurandcu.github.io/icon.png</icon>
+  <subtitle>bopomofo</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://sulfurandcu.github.io/"/>
+  <updated>2018-10-30T02:23:05.000Z</updated>
+  <id>https://sulfurandcu.github.io/</id>
+  
+  <author>
+    <name>硫及銅</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用github-pages搭建個人博客</title>
+    <link href="https://sulfurandcu.github.io/20181025.%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B.html"/>
+    <id>https://sulfurandcu.github.io/20181025.个人博客搭建流程.html</id>
+    <published>2018-10-25T02:23:05.000Z</published>
+    <updated>2018-10-30T02:23:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://sulfurandcu.github.io/">https://sulfurandcu.github.io/</a></p><a id="more"></a><h4 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h4><p>首先在 GitHub 上創建一個代碼倉庫 oxoooooooo.github.io<br>安裝 git 版本控制工具<br>重設 git 默認工作路徑</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/etc/profile：</span><br><span class="line"></span><br><span class="line"># normalize HOME to unix path</span><br><span class="line">HOME=&quot;*******************&quot;</span><br><span class="line">HOME=&quot;$(cd &quot;$HOME&quot; ; pwd)&quot;</span><br><span class="line">cd</span><br><span class="line">export PATH=&quot;$HOME/bin:$PATH&quot;</span><br><span class="line"></span><br><span class="line"># set Project Path</span><br><span class="line">proj=&quot;/repo/sulfurandcu.github.io.src&quot;</span><br><span class="line">cd $proj</span><br></pre></td></tr></table></figure><p>在本地生成密鑰，并將公鑰添加至賬戶</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C email@example.com</span><br></pre></td></tr></table></figure><p>安裝 node.js 運行環境<br>重設 npm 的默認工作路徑 ：npm config set prefix “d:\install_path”<br>重設 npm 的默認緩存路徑 ：npm config set  cache “d:\install_path\node_modules_cache”</p><p>安裝開源靜態博客編譯工具：npm install -g hexo-cli（安裝到 d:\install_path\node_modules\ 目錄）</p><h4 id="生成框架"><a href="#生成框架" class="headerlink" title="生成框架"></a>生成框架</h4><p>首先建立一個站點倉庫 /~<br>進入該倉庫右鍵 git bash here 打開 git 工具<br>依次執行：</p><p>hexo init（生成 ~\node_modules\, ~\scaffolds\, ~\source\, ~\themes\）</p><p>自動安裝 hexo 依賴：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">&quot;hexo&quot;: &quot;^4.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-index&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-category&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-tag&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-archive&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&quot;hexo-renderer-ejs&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&quot;hexo-renderer-stylus&quot;: &quot;^1.1.0&quot;,</span><br><span class="line">&quot;hexo-renderer-marked&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-server&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>手動安裝 hexo 插件：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --no-optional --save hexo-generator-feed</span><br><span class="line">npm install --no-optional --save hexo-symbols-count-time</span><br><span class="line">npm install --no-optional --save hexo-deployer-git</span><br><span class="line">npm install --no-optional --save hexo-generator-sitemap</span><br><span class="line">npm install --no-optional --save hexo-generator-baidu-sitemap</span><br><span class="line">npm install --no-optional --save hexo-baidu-url-submit</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;hexo-deployer-git&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-feed&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">&quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;,</span><br><span class="line">&quot;hexo-baidu-url-submit&quot;: &quot;0.0.6&quot;,</span><br><span class="line">&quot;hexo-symbols-count-time&quot;: &quot;^0.6.3&quot;</span><br></pre></td></tr></table></figure><p>倉庫目錄結構如下：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-  node_modules         # 功能依賴</span><br><span class="line">-  public               # 發佈目錄</span><br><span class="line">-  scaffolds            # 模板目錄</span><br><span class="line">-  source               # 源碼目錄</span><br><span class="line">    - _drafts           　　# 草稿</span><br><span class="line">    - _posts            　　# 文章</span><br><span class="line"></span><br><span class="line">    - archive           　　# 歸檔</span><br><span class="line">    - tags              　　# 標簽</span><br><span class="line">    - categories        　　# 分類</span><br><span class="line"></span><br><span class="line">    - img               　　# 圖片</span><br><span class="line">    - about             　　# 關於</span><br><span class="line"></span><br><span class="line">-  themes               # 主題目錄</span><br><span class="line">-   - landscape         # 主題1</span><br><span class="line">       - _config.yml    # 主題配置</span><br><span class="line">-   - next              # 主題2</span><br><span class="line">       - _config.yml    # 主題配置</span><br><span class="line"></span><br><span class="line">-  _config.yml          # 站點配置</span><br></pre></td></tr></table></figure><p>hexo command：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init [path]                # 在當前路徑下生成網站框架</span><br><span class="line">hexo new  [layout] &quot;TITLE&quot;      # 新建文章</span><br><span class="line">hexo g                          # 生成靜態頁面</span><br><span class="line">hexo s                          # 部署到本地服務器，本地預覽</span><br><span class="line">hexo d                          # 部署到遠程服務器，在綫瀏覽</span><br><span class="line">hexo clean                      # 站點整體佈局效果改變時執行</span><br></pre></td></tr></table></figure><h4 id="博客遷移"><a href="#博客遷移" class="headerlink" title="博客遷移"></a>博客遷移</h4><p>將 package.json、db.json、package-lock.json 拷貝到倉庫根目錄</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;3.9.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>自動安裝 pacgage.json 中的依賴：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>拷貝 /source/google** 到 /source 目錄<br>拷貝 /source/baidu_verify_** 到 /source 目錄</p><p>在本地生成密鑰，并將公鑰添加至賬戶</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C email@example.com</span><br></pre></td></tr></table></figure><h4 id="開始寫作"><a href="#開始寫作" class="headerlink" title="開始寫作"></a>開始寫作</h4><p>新建文章：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &apos;TITLE&apos;</span><br></pre></td></tr></table></figure><p>頭部格式：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: TITLE</span><br><span class="line">date:  YYYY-MM-DD</span><br><span class="line">categories:</span><br><span class="line">- [category1, category1.x]</span><br><span class="line">- [category2, category2.x]</span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">- tag2</span><br><span class="line">comments: true</span><br></pre></td></tr></table></figure><h4 id="部署網站"><a href="#部署網站" class="headerlink" title="部署網站"></a>部署網站</h4><p>本地部署：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">http://localhost:4000/</span><br></pre></td></tr></table></figure><p>遠程部署：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">http://oxoooooooo.github.io/</span><br></pre></td></tr></table></figure><h4 id="步入正軌"><a href="#步入正軌" class="headerlink" title="步入正軌"></a>步入正軌</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &apos;blog-title&apos;</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">...</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">...</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line">http://oxoooooooo.github.io/</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://sulfurandcu.github.io/&quot;&gt;https://sulfurandcu.github.io/&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客搭建" scheme="https://sulfurandcu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>赴戍登程口占示家人</title>
+    <link href="https://sulfurandcu.github.io/welcome.html"/>
+    <id>https://sulfurandcu.github.io/welcome.html</id>
+    <published>2018-08-11T02:23:05.000Z</published>
+    <updated>2018-08-11T02:23:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<center>出門一笑莫心哀　浩蕩襟懷到處開</center><center>時實難以無過立　達官非自有生來</center><center>風濤回首空三島　塵壤從頭數九垓</center><center>休信兒童輕薄語　嗤他趙老送燈臺</center><center><br></center><center>力微任重久神疲　再竭衰庸定不支</center><center>苟利國家生死以　豈因禍福避趨之</center><center>謫居正是君恩厚　養拙剛於戍卒宜</center><center>戲與山妻談故事　試吟斷送老頭皮</center><br><br><a id="more"></a><center><a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E5%88%99%E5%BE%90" target="_blank" rel="noopener">林則徐</a></center><center><a href="https://creativecommons.org/share-your-work/public-domain/pdm/" target="_blank" rel="noopener">Public Domain Mark</a></center><br><br>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;出門一笑莫心哀　浩蕩襟懷到處開&lt;/center&gt;
+&lt;center&gt;時實難以無過立　達官非自有生來&lt;/center&gt;
+&lt;center&gt;風濤回首空三島　塵壤從頭數九垓&lt;/center&gt;
+&lt;center&gt;休信兒童輕薄語　嗤他趙老送燈臺&lt;/center&gt;
+&lt;center&gt;&lt;br&gt;&lt;/center&gt;
+&lt;center&gt;力微任重久神疲　再竭衰庸定不支&lt;/center&gt;
+&lt;center&gt;苟利國家生死以　豈因禍福避趨之&lt;/center&gt;
+&lt;center&gt;謫居正是君恩厚　養拙剛於戍卒宜&lt;/center&gt;
+&lt;center&gt;戲與山妻談故事　試吟斷送老頭皮&lt;/center&gt;
+&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
