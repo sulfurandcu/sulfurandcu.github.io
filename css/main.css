@@ -157,7 +157,7 @@ body {
 body {
   background: #eee;
   color: #555;
-  font-family: 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif, sans-serif;
+  font-family: 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 2;
 }
@@ -173,7 +173,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif, sans-serif;
+  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -374,7 +374,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Courier New', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Courier New', "Courier New", monospace, "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 code {
   background: #eee;
@@ -957,7 +957,7 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
-  font-family: 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif, sans-serif;
+  font-family: 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1146,7 +1146,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6f17ff;
+  background: #ff3cb6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1480,7 +1480,7 @@ pre .javascript .function {
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif, sans-serif;
+  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (min-width: 1200px) {
   .post-body {
@@ -1790,7 +1790,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif, sans-serif;
+  font-family: 'EB Garamond', 'Noto Serif TC', "Noto Serif TC", "Noto Serif SC", serif, "PingFang TC", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2696,8 +2696,4 @@ a:hover {
   src: url("../fonts/NotoSerifTC-Bold.eot?#font-spider") format('embedded-opentype'), url("../fonts/NotoSerifTC-Bold.ttf") format('truetype'), url("../fonts/NotoSerifTC-Bold.woff") format('woff'), url("../fonts/NotoSerifTC-Bold.woff2") format('woff2');
   font-weight: 700;
   font-style: normal;
-}
-.post-body,
-.posts-expand .post-title {
-  font-family: 'EB Garamond', 'Noto Serif TC';
 }
