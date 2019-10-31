@@ -10,10 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/b-repositories/sulfurandcu.github.io.src/public/css/main.css">
 
 
 <script id="hexo-configurations">
@@ -57,7 +54,7 @@
 <meta property="og:site_name" content="ㄅㄆㄇㄈ">
 <meta property="og:description" content="https:&#x2F;&#x2F;sulfurandcu.github.io&#x2F;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T08:51:58.699Z">
+<meta property="og:updated_time" content="2019-10-31T06:42:18.676Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://sulfurandcu.github.io/notesite-hexo-next.html">
@@ -190,7 +187,7 @@
     <link itemprop="mainEntityOfPage" href="https://sulfurandcu.github.io/notesite-hexo-next.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="硫及銅">
       <meta itemprop="description" content="枸杞養生  亦能續命">
     </span>
@@ -217,7 +214,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2019-10-25 16:51:58" itemprop="dateModified" datetime="2019-10-25T16:51:58+08:00">2019-10-25</time>
+                <time title="修改時間：2019-10-31 14:42:18" itemprop="dateModified" datetime="2019-10-31T14:42:18+08:00">2019-10-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -270,7 +267,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;d:\install_path&quot;</span><br><span class="line">npm config set  cache &quot;d:\install_path\node_modules_cache&quot;</span><br></pre></td></tr></table></figure>
 
 <p><strong>安裝靜態博客編譯工具</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli（installed to d:\install_path\node_modules\）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># installed to d:\install_path\node_modules\</span><br><span class="line"></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install -g node-gyp</span><br><span class="line">npm install -g fontmin</span><br><span class="line">npm install -g font-spider</span><br><span class="line"></span><br><span class="line"># powershell</span><br><span class="line">Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force</span><br><span class="line">npm install -g windows-build-tools</span><br><span class="line">window-build-tools</span><br></pre></td></tr></table></figure>
 
 
 <h4 id="生成框架"><a href="#生成框架" class="headerlink" title="生成框架"></a>生成框架</h4><p><strong>將源碼倉庫克隆到本地｜初始為空</strong></p>
@@ -292,7 +289,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">	&quot;hexo&quot;: &quot;^4.0.0&quot;,</span><br><span class="line">	&quot;hexo-generator-index&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">	&quot;hexo-generator-category&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">	&quot;hexo-generator-tag&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">	&quot;hexo-generator-archive&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">	&quot;hexo-renderer-ejs&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">	&quot;hexo-renderer-stylus&quot;: &quot;^1.1.0&quot;,</span><br><span class="line">	&quot;hexo-renderer-marked&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">	&quot;hexo-server&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>手動安裝 hexo 插件</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --no-optional --save hexo-symbols-count-time</span><br><span class="line">npm install --no-optional --save hexo-deployer-git</span><br><span class="line">npm install --no-optional --save hexo-generator-feed</span><br><span class="line">npm install --no-optional --save hexo-generator-sitemap</span><br><span class="line">npm install --no-optional --save hexo-generator-baidu-sitemap</span><br><span class="line">npm install --no-optional --save hexo-baidu-url-submit</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-symbols-count-time</span><br><span class="line">npm install --save hexo-deployer-git</span><br><span class="line">npm install --save hexo-generator-feed</span><br><span class="line">npm install --save hexo-generator-sitemap</span><br><span class="line">npm install --save hexo-generator-baidu-sitemap</span><br><span class="line">npm install --save hexo-baidu-url-submit</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;hexo-symbols-count-time&quot;: &quot;^0.6.3&quot;</span><br><span class="line">&quot;hexo-deployer-git&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-feed&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">&quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;,</span><br><span class="line">&quot;hexo-baidu-url-submit&quot;: &quot;0.0.6&quot;,</span><br></pre></td></tr></table></figure>
 
@@ -418,7 +415,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="site-author-image" itemprop="image" alt="硫及銅"
-    src="/images/avatar.png">
+    src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">硫及銅</p>
   <div class="site-description" itemprop="description">枸杞養生  亦能續命</div>
 </div>
