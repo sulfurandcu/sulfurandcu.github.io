@@ -57,7 +57,7 @@
 <meta property="og:site_name" content="ㄅㄆㄇㄈ">
 <meta property="og:description" content="系統安裝備忘">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-30T08:59:18.364Z">
+<meta property="og:updated_time" content="2019-11-08T09:46:20.272Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://sulfurandcu.github.io/os-installation-n-optimization.html">
@@ -217,7 +217,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2019-10-30 16:59:18" itemprop="dateModified" datetime="2019-10-30T16:59:18+08:00">2019-10-30</time>
+                <time title="修改時間：2019-11-08 17:46:20" itemprop="dateModified" datetime="2019-11-08T17:46:20+08:00">2019-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,21 +247,15 @@
 <br>
 <a id="more"></a>
 
-
 <h4 id="數據備份｜安裝之前"><a href="#數據備份｜安裝之前" class="headerlink" title="數據備份｜安裝之前"></a>數據備份｜安裝之前</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.01 系統信息</span><br><span class="line">1.02 基本設置 - 環境變量，排除選項，快捷方式</span><br><span class="line">1.03 顯示設置 - 開始菜單，快捷菜單，右鍵菜單，通知區域，快速存取，文件夾選項</span><br><span class="line"></span><br><span class="line">1.11 C盤：用戶文件</span><br><span class="line">1.12 D盤：軟件目錄</span><br><span class="line">1.15 G盤：桌面位置</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="系統獲取｜安裝之前"><a href="#系統獲取｜安裝之前" class="headerlink" title="系統獲取｜安裝之前"></a>系統獲取｜安裝之前</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows_x.iso</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="系統刻錄｜安裝之前"><a href="#系統刻錄｜安裝之前" class="headerlink" title="系統刻錄｜安裝之前"></a>系統刻錄｜安裝之前</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mediacreationtool or ultraiso</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="開始安裝"><a href="#開始安裝" class="headerlink" title="開始安裝"></a>開始安裝</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">關機重新啓動（若是重新安裝：關機之前斷開網絡設置時間）</span><br><span class="line">使用本地賬戶</span><br><span class="line">連接無線網絡</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="系統設置｜安裝之後"><a href="#系統設置｜安裝之後" class="headerlink" title="系統設置｜安裝之後"></a>系統設置｜安裝之後</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.00 首先激活系統</span><br><span class="line">1.01 設置系統時間</span><br><span class="line">1.02 設置主機名稱</span><br><span class="line">1.03 設置磁碟分區</span><br><span class="line">1.05 系統管理語言 - 中文簡體　　　　　　重新啓動</span><br><span class="line"></span><br><span class="line">1.08 連接無線網絡 - 檢查更新　安裝驅動　重新啓動</span><br><span class="line"></span><br><span class="line">1.10 禁止自動更新｜可選</span><br><span class="line">	電腦管理 - 服務應用程式 - 服務 - Windows Update - 一般：已停用｜復原：不執行任何動作</span><br><span class="line">	策略管理 - 系統管理範本 - 元件 - Windows Update - 設定自動更新：已停用（gpedit.msc）</span><br><span class="line"></span><br><span class="line">1.11 卸載自帶軟件</span><br><span class="line"></span><br><span class="line">1.12 登入個人賬戶</span><br><span class="line"></span><br><span class="line">1.13 更改桌面位置</span><br><span class="line"></span><br><span class="line">1.14 基本設置步驟 - 開始菜單，快捷菜單，右鍵菜單，通知區域，快速存取，文件夾選項</span><br><span class="line"></span><br><span class="line">1.15 安裝軟件步驟 - 排除選項，安裝軟件，卸載信息，環境變量，快捷方式</span><br><span class="line"></span><br><span class="line">1.18 還原用戶文件</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="預裝卸載｜附"><a href="#預裝卸載｜附" class="headerlink" title="預裝卸載｜附"></a>預裝卸載｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
 
@@ -269,18 +263,13 @@
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy Restricted</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="三維對象｜附"><a href="#三維對象｜附" class="headerlink" title="三維對象｜附"></a>三維對象｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\&#123;0DB7E03F-FC29-4DC6-9020-FF41B59E513A&#125;</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="右鍵菜單｜附"><a href="#右鍵菜單｜附" class="headerlink" title="右鍵菜單｜附"></a>右鍵菜單｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT\Drive\shell\cmd                                               HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_CLASSES_ROOT\Drive\shell\Powershell                                        HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_CLASSES_ROOT\Directory\shell\cmd                                           HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_CLASSES_ROOT\Directory\shell\Powershell                                    HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_CLASSES_ROOT\Directory\Background\shell\cmd                                HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell                         HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Drive\shell\cmd                             HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Drive\shell\Powershell                      HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\cmd                         HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\Powershell                  HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\cmd              HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\Powershell       HideBasedOnVelocityId/ShowBasedOnVelocityId</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="卸載信息｜附"><a href="#卸載信息｜附" class="headerlink" title="卸載信息｜附"></a>卸載信息｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="環境變量｜附"><a href="#環境變量｜附" class="headerlink" title="環境變量｜附"></a>環境變量｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%SystemRoot%\system32;</span><br><span class="line">%SystemRoot%;</span><br><span class="line">%SystemRoot%\System32\Wbem;</span><br><span class="line">%SYSTEMROOT%\System32\OpenSSH\;</span><br><span class="line">%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;</span><br><span class="line"></span><br><span class="line">D:\developu-env\JDK_1.8.0_181_64bit\bin</span><br><span class="line">D:\developu-env\JDK_1.8.0_181_64bit\jre\bin</span><br><span class="line">D:\developu-env\JDK_1.8.0_181_32bit\bin</span><br><span class="line">D:\developu-env\JDK_1.8.0_181_32bit\jre\bin</span><br><span class="line">D:\developu-env\Python_2.7.15_64bit\</span><br><span class="line">D:\developu-env\Python_2.7.15_64bit\Scripts</span><br><span class="line">D:\developu-env\Python_2.7.15_32bit\</span><br><span class="line">D:\developu-env\Python_2.7.15_32bit\Scripts</span><br><span class="line"></span><br><span class="line">D:\developu-database\mysql</span><br><span class="line">D:\developu-database\oracle_xe\app\oracle\product\11.2.0\server\bin</span><br><span class="line"></span><br><span class="line">D:\apache-tomcat-8.5.16\bin == %CATALINA_HOME%\bin\;</span><br><span class="line">D:\apache-maven-3.5.0\bin   == %MAVEN_HOME%\bin;</span><br><span class="line"></span><br><span class="line">D:\b-2oolkits-portable\alphabetum.3rd.babun\.babun</span><br><span class="line"></span><br><span class="line">G:\backspace-windows\documents\5hortcut</span><br><span class="line"></span><br><span class="line">C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility</span><br><span class="line"></span><br><span class="line">%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\OpenSSH\;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;D:\b-2oolkits-portable\alphabetum.3rd.babun\.babun;D:\developu-env\JDK_1.8.0_181_64bit\bin;D:\developu-env\JDK_1.8.0_181_64bit\jre\bin;D:\developu-env\Python_2.7.15_64bit\;D:\developu-env\Python_2.7.15_64bit\Scripts;D:\developu-database\oracle_xe\app\oracle\product\11.2.0\server\bin;G:\backspace-windows\documents\5hortcut;</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="腳本工具｜附"><a href="#腳本工具｜附" class="headerlink" title="腳本工具｜附"></a>腳本工具｜附</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># delete.bat</span><br><span class="line"></span><br><span class="line">DEL /F /A /Q \\?\%1</span><br><span class="line">RD /S /Q \\?\%1</span><br></pre></td></tr></table></figure>
 

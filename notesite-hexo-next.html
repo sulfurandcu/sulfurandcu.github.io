@@ -57,7 +57,7 @@
 <meta property="og:site_name" content="ㄅㄆㄇㄈ">
 <meta property="og:description" content="https:&#x2F;&#x2F;sulfurandcu.github.io&#x2F;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-31T06:42:18.676Z">
+<meta property="og:updated_time" content="2019-11-08T10:17:18.755Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://sulfurandcu.github.io/notesite-hexo-next.html">
@@ -217,7 +217,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2019-10-31 14:42:18" itemprop="dateModified" datetime="2019-10-31T14:42:18+08:00">2019-10-31</time>
+                <time title="修改時間：2019-11-08 18:17:18" itemprop="dateModified" datetime="2019-11-08T18:17:18+08:00">2019-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,6 @@
 <br>
 <a id="more"></a>
 
-
 <h4 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h4><p><strong>創建一個站點倉庫 - 存放生成的靜態頁面</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">repo/oxoooooooo.github.io</span><br></pre></td></tr></table></figure>
 
@@ -258,7 +257,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">略.</span><br></pre></td></tr></table></figure>
 
 <p><strong>重設 git 默認工作路徑</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># path : install_path/etc/profile</span><br><span class="line"></span><br><span class="line"># normalize HOME to unix path</span><br><span class="line">HOME=&quot;*******************&quot;</span><br><span class="line">HOME=&quot;$(cd &quot;$HOME&quot; ; pwd)&quot;</span><br><span class="line">cd</span><br><span class="line">export PATH=&quot;$HOME/bin:$PATH&quot;</span><br><span class="line"></span><br><span class="line"># set Project Path</span><br><span class="line">proj=&quot;/repo/sulfurandcu.github.io.src&quot;</span><br><span class="line">cd $proj</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># path : install_path/etc/profile</span><br><span class="line"></span><br><span class="line">HOME=&quot;home_path&quot;</span><br></pre></td></tr></table></figure>
 
 <p><strong>生成密鑰，并將公鑰添加至賬戶</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C email@example.com</span><br></pre></td></tr></table></figure>
@@ -272,7 +271,6 @@
 <p><strong>安裝靜態博客編譯工具</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># installed to d:\install_path\node_modules\</span><br><span class="line"></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install -g node-gyp</span><br><span class="line">npm install -g fontmin</span><br><span class="line">npm install -g font-spider</span><br><span class="line"></span><br><span class="line"># powershell</span><br><span class="line">Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force</span><br><span class="line">npm install -g windows-build-tools</span><br><span class="line">window-build-tools</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="生成框架"><a href="#生成框架" class="headerlink" title="生成框架"></a>生成框架</h4><p><strong>將源碼倉庫克隆到本地｜初始為空</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">repo/oxoooooooo.github.io.src</span><br></pre></td></tr></table></figure>
 
@@ -285,7 +283,6 @@
 <p><strong>附｜常用命令</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init [path]                # 在當前路徑下生成網站框架</span><br><span class="line">hexo new  [layout] &quot;TITLE&quot;      # 新建文章</span><br><span class="line">hexo g                          # 生成靜態頁面</span><br><span class="line">hexo s                          # 部署到本地服務器，本地預覽</span><br><span class="line">hexo d                          # 部署到遠程服務器，在綫瀏覽</span><br><span class="line">hexo clean                      # 站點整體佈局效果改變時執行</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h4><p><strong>自動安裝 hexo 依賴</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
@@ -295,7 +292,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-symbols-count-time</span><br><span class="line">npm install --save hexo-deployer-git</span><br><span class="line">npm install --save hexo-generator-feed</span><br><span class="line">npm install --save hexo-generator-sitemap</span><br><span class="line">npm install --save hexo-generator-baidu-sitemap</span><br><span class="line">npm install --save hexo-baidu-url-submit</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;hexo-symbols-count-time&quot;: &quot;^0.6.3&quot;</span><br><span class="line">&quot;hexo-deployer-git&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-feed&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">&quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">&quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;,</span><br><span class="line">&quot;hexo-baidu-url-submit&quot;: &quot;0.0.6&quot;,</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="博客遷移"><a href="#博客遷移" class="headerlink" title="博客遷移"></a>博客遷移</h4><p><strong>安裝配置 git 版本控制工具</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">同上.</span><br></pre></td></tr></table></figure>
@@ -328,7 +324,6 @@
 
 <p><strong>頭部格式</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: TITLE</span><br><span class="line">id: uri</span><br><span class="line">date:  YYYY-MM-DD HH:MM:SS</span><br><span class="line">updated: </span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">- tag2</span><br><span class="line">categories:</span><br><span class="line">- [category1, category1.x]</span><br><span class="line">- [category2, category2.x]</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="部署網站"><a href="#部署網站" class="headerlink" title="部署網站"></a>部署網站</h4><p><strong>本地部署</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">https://localhost:4000/</span><br></pre></td></tr></table></figure>

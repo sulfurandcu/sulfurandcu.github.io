@@ -57,7 +57,7 @@
 <meta property="og:site_name" content="ㄅㄆㄇㄈ">
 <meta property="og:description" content="https:&#x2F;&#x2F;shadowsocks.org&#x2F;en&#x2F;index.html">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-24T12:55:38.996Z">
+<meta property="og:updated_time" content="2019-11-08T11:27:49.062Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://sulfurandcu.github.io/llawerif-break.html">
@@ -217,7 +217,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2019-10-24 20:55:38" itemprop="dateModified" datetime="2019-10-24T20:55:38+08:00">2019-10-24</time>
+                <time title="修改時間：2019-11-08 19:27:49" itemprop="dateModified" datetime="2019-11-08T19:27:49+08:00">2019-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,7 +248,7 @@
 <a id="more"></a>
 <br>
 
-<p>這裏僅貼了一些命令的腳本，詳細步驟暫時就不在此羅列啦，感興趣的話可以自己去網絡搜索，有搞不懂的地方可以郵件聯繫我。</p>
+<p>這裏僅貼了一些命令的腳本，詳細步驟暫時就不在此羅列啦，感興趣的話可以自己去網絡搜索。</p>
 <h4 id="使用-bbr-加速"><a href="#使用-bbr-加速" class="headerlink" title="使用 bbr 加速"></a>使用 bbr 加速</h4><p><strong>安裝、設置、重啓</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">uname -r</span><br><span class="line"></span><br><span class="line">sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org</span><br><span class="line">sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm</span><br><span class="line"></span><br><span class="line">sudo yum --enablerepo=elrepo-kernel install kernel-ml -y</span><br><span class="line"></span><br><span class="line">rpm -qa | grep kernel</span><br><span class="line"></span><br><span class="line">sudo egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \&apos;</span><br><span class="line"></span><br><span class="line">sudo grub2-set-default 0</span><br><span class="line"></span><br><span class="line">sudo shutdown -r now</span><br></pre></td></tr></table></figure>
 
@@ -257,7 +257,6 @@
 
 <p><strong>測試工具｜可選</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo yum install httpd -y</span><br><span class="line">sudo systemctl start httpd.service</span><br><span class="line">sudo firewall-cmd --zone=public --permanent --add-service=http</span><br><span class="line">sudo firewall-cmd --reload</span><br><span class="line">cd /var/www/html</span><br><span class="line">sudo dd if=/dev/zero of=500mb.zip bs=1024k count=500</span><br><span class="line"></span><br><span class="line">http://[your-server-IP]/500mb.zip</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="服務端工具之-shadowsocks"><a href="#服務端工具之-shadowsocks" class="headerlink" title="服務端工具之 shadowsocks"></a>服務端工具之 shadowsocks</h4><p><strong>程序安裝</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;</span><br><span class="line">python get-pip.py</span><br><span class="line">pip install --upgrade pip</span><br><span class="line"></span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
@@ -272,7 +271,6 @@
 <p><strong>啓動服務</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json -d start</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="服務端工具之-v2ray"><a href="#服務端工具之-v2ray" class="headerlink" title="服務端工具之 v2ray"></a>服務端工具之 v2ray</h4><p><strong>程序安裝</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line">yum -y install zip unzip</span><br><span class="line">wget https://install.direct/go.sh</span><br><span class="line">bash go.sh</span><br></pre></td></tr></table></figure>
 
@@ -282,21 +280,15 @@
 <p><strong>啓動服務</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start v2ray</span><br></pre></td></tr></table></figure>
 
-
-<h4 id="服務端防火牆-firewalld"><a href="#服務端防火牆-firewalld" class="headerlink" title="服務端防火牆 firewalld"></a>服務端防火牆 firewalld</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=80/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=10235/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=10245/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
+<h4 id="服務端防火牆-firewalld"><a href="#服務端防火牆-firewalld" class="headerlink" title="服務端防火牆 firewalld"></a>服務端防火牆 firewalld</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install firewalld</span><br><span class="line">systemctl start firewalld.service</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=80/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=10235/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=10245/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
 
 <h4 id="客戶端工具之-shadowrocket"><a href="#客戶端工具之-shadowrocket" class="headerlink" title="客戶端工具之 shadowrocket"></a>客戶端工具之 shadowrocket</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">略.</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="客戶端工具之-kite"><a href="#客戶端工具之-kite" class="headerlink" title="客戶端工具之 kite"></a>客戶端工具之 kite</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">略.</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="客戶端工具之-detour"><a href="#客戶端工具之-detour" class="headerlink" title="客戶端工具之 detour"></a>客戶端工具之 detour</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">略.</span><br></pre></td></tr></table></figure>
 
-
 <h4 id="客戶端工具之-brook"><a href="#客戶端工具之-brook" class="headerlink" title="客戶端工具之 brook"></a>客戶端工具之 brook</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">略.</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="客戶端工具之-outline"><a href="#客戶端工具之-outline" class="headerlink" title="客戶端工具之 outline"></a>客戶端工具之 outline</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ss://base64(method:passwod)@server-address:port</span><br><span class="line">ss://YWVzLTI1Ni1jZmI6UGFzc3dvcmQ=@xxx.xxx.xxx.xxx:xxxxx</span><br></pre></td></tr></table></figure>
 
